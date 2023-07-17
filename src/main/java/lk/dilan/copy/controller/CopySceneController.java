@@ -41,6 +41,7 @@ public class CopySceneController {
     private File targetFolder;
 public void initialize(){
     btnCopy.setDisable(true);
+//    btnReset.setDisable(true);
 }
 
     @FXML
@@ -93,6 +94,7 @@ public void initialize(){
 
     private void enableCopyButton() {
         btnCopy.setDisable(sourceFile==null || targetFolder ==null || sourceFile.getParentFile().equals(targetFolder));
+
     }
 
     @FXML
@@ -107,12 +109,17 @@ public void initialize(){
 
     @FXML
     void btnResetOnAction(ActionEvent event) {
+        btnReset.getScene().getWindow().setHeight(250);
         txtSource.clear();
         txtTarget.clear();
+        sourceFile = null;
+        targetFolder = null;
         enableCopyButton();
+        prgCopy.progressProperty().unbind();
         prgCopy.setProgress(0);
+        lblStatus.textProperty().unbind();
         lblStatus.setText("0% Complete");
-        txtSource.requestFocus();
+        btnSource.requestFocus();
     }
 
 }
