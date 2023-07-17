@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -36,6 +37,7 @@ public class CopySceneController {
     @FXML
     private TextField txtTarget;
     private File sourceFile;
+    private File targetFile;
 
     @FXML
     void btnCopyOnAction(ActionEvent event) {
@@ -53,13 +55,17 @@ public class CopySceneController {
     }
 
     private void enableCopyButton() {
-        btnCopy.setDisable(sourceFile==null);
+        btnCopy.setDisable(sourceFile==null || targetFile==null || sourceFile.getParentFile().equals(targetFile));
     }
 
     @FXML
     void btnTargetOnAction(ActionEvent event) {
-
-
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        directoryChooser.setTitle("Select the destination folder");
+        targetFile=directoryChooser.showDialog(btnTarget.getScene().getWindow());
+        enableCopyButton();
+        if (targetFile==null) return;
+        txtTarget.setText(targetFile.getAbsolutePath());
     }
 
     @FXML

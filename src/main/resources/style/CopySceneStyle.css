@@ -35,3 +35,9 @@
 #prgCopy .bar {
     -fx-background-color: #00ff06;
 }
+#btnSource{
+    -fx-background-color: #037c03;
+}
+#btnTarget{
+    -fx-background-color: #037c03;
+}
