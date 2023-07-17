@@ -38,6 +38,9 @@ public class CopySceneController {
     private TextField txtTarget;
     private File sourceFile;
     private File targetFile;
+public void initialize(){
+    btnCopy.setDisable(true);
+}
 
     @FXML
     void btnCopyOnAction(ActionEvent event) {
@@ -69,8 +72,13 @@ public class CopySceneController {
     }
 
     @FXML
-    void ntmResetOnAction(ActionEvent event) {
-
+    void btnResetOnAction(ActionEvent event) {
+        txtSource.clear();
+        txtTarget.clear();
+        enableCopyButton();
+        prgCopy.setProgress(0);
+        lblStatus.setText("0% Complete");
+        txtSource.requestFocus();
     }
 
 }
