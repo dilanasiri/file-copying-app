@@ -1,0 +1,17 @@
+#btnCopy {
+    -fx-background-color: #0082b9;
+    -fx-text-fill: white;
+}
+
+#btnCopy:hover {
+    -fx-background-color: rgba(0, 130, 185, 0.86);
+}
+
+#btnReset {
+    -fx-background-color: #ad0000;
+    -fx-text-fill: white;
+}
+
+#btnReset:hover {
+    -fx-background-color: rgba(173, 0, 0, 0.86);
+}
