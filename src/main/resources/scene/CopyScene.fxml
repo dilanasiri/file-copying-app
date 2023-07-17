@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="290.0" prefWidth="600.0" stylesheets="@../style/CopySceneStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.dilan.copy.controller.CopySceneController">
+<AnchorPane fx:id="root" prefHeight="290.0" prefWidth="600.0" stylesheets="@../style/CopySceneStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.dilan.copy.controller.CopySceneController">
    <children>
       <HBox layoutX="15.0" layoutY="42.0" prefHeight="30.0" prefWidth="570.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
          <children>

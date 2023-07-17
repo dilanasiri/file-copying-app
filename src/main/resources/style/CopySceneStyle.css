@@ -1,3 +1,17 @@
+.root{
+    -fx-font-family: Ubuntu;
+    -fx-font-size: 16px;
+}
+.text-field{
+    -fx-border-color: lightgrey;
+    -fx-background-color: white;
+    -fx-border-width: 1px;
+    -fx-prompt-text-fill: #a6a5a5;
+}
+.text-field:focused {
+    -fx-prompt-text-fill: #a6a5a5;
+}
+
 #btnCopy {
     -fx-background-color: #0082b9;
     -fx-text-fill: white;
@@ -14,4 +28,10 @@
 
 #btnReset:hover {
     -fx-background-color: rgba(173, 0, 0, 0.86);
+}
+#root{
+    -fx-background-color: white;
+}
+#prgCopy .bar {
+    -fx-background-color: #00ff06;
 }
