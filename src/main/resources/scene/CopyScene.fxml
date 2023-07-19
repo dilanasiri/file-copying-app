@@ -9,10 +9,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="root" prefHeight="290.0" prefWidth="600.0" stylesheets="@../style/CopySceneStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.dilan.copy.controller.CopySceneController">
    <children>
-      <HBox layoutX="15.0" layoutY="42.0" prefHeight="30.0" prefWidth="570.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+      <HBox layoutX="15.0" layoutY="43.0" prefHeight="30.0" prefWidth="570.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
          <children>
             <TextField fx:id="txtSource" maxWidth="470.0" prefHeight="30.0" prefWidth="470.0" promptText="No File Has Been Selected" />
             <Button fx:id="btnSource" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSourceOnAction" prefHeight="30.0" prefWidth="100.0" text="BROWSER">
@@ -27,7 +26,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <HBox layoutX="16.0" layoutY="115.0" prefHeight="30.0" prefWidth="570.0">
+      <HBox layoutX="16.0" layoutY="122.0" prefHeight="30.0" prefWidth="570.0">
          <children>
             <TextField fx:id="txtTarget" maxWidth="470.0" prefHeight="30.0" prefWidth="470.0" promptText="No File Has Been Selected" />
             <Button fx:id="btnTarget" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnTargetOnAction" prefHeight="30.0" prefWidth="100.0" text="BROWSER">
@@ -37,12 +36,12 @@
             </Button>
          </children>
       </HBox>
-      <Label layoutX="15.0" layoutY="87.0" prefHeight="25.0" prefWidth="300.0" text="Select the destination directory">
+      <Label layoutX="15.0" layoutY="93.0" prefHeight="25.0" prefWidth="300.0" text="Select the destination directory">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER" layoutX="16.0" layoutY="163.0" prefHeight="30.0" prefWidth="570.0" spacing="10.0">
+      <HBox alignment="CENTER" layoutX="16.0" layoutY="169.0" prefHeight="30.0" prefWidth="570.0" spacing="10.0" AnchorPane.leftAnchor="16.0">
          <children>
             <Button fx:id="btnCopy" maxWidth="1.7976931348623157E308" onAction="#btnCopyOnAction" prefHeight="30.0" prefWidth="100.0" text="_COPY">
                <cursor>
@@ -59,7 +58,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </HBox>
-      <ProgressBar fx:id="prgCopy" layoutX="16.0" layoutY="212.0" prefHeight="25.0" prefWidth="570.0" progress="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
-      <Label fx:id="lblStatus" alignment="CENTER" layoutX="283.0" layoutY="244.0" prefHeight="25.0" prefWidth="570.0" text="0% Complete" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <ProgressBar fx:id="prgCopy" layoutX="16.0" layoutY="219.0" prefHeight="25.0" prefWidth="570.0" progress="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Label fx:id="lblStatus" alignment="CENTER" layoutX="283.0" layoutY="254.0" prefHeight="25.0" prefWidth="570.0" text="0% Complete" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
    </children>
 </AnchorPane>
